@@ -24,3 +24,24 @@ if (terzoNumero > maggiore) {
     maggiore = terzoNumero;
 }
 
+// col promt
+
+let numberOne = prompt("scrivi due numeri");
+
+//per farmelo tornare un numero o potevo assegnare parseInt prima di promt
+let numeroUno = parseInt(numberOne);
+
+let numbertwo = prompt("scrivi il secondo numero");
+let numeroDue = parseInt(numbertwo);
+
+// se il numero uno è maggiore stampo il primo altrimenti stampo il secondo
+
+if (numeroUno > numeroDue) {
+    console.log(numeroUno)
+}
+else {
+    console.log(numeroDue)
+}
+
+// scritto uguale al primo ma col prompt e parseint
+
