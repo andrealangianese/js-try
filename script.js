@@ -46,20 +46,30 @@
 // scritto uguale al primo ma col prompt e parseint
 
 
-// JSnack 3
-//  Il software deve chiedere per 5 volte all’utente di inserire un numero. 
-//  Il programma stampa la somma di tutti i numeri inseriti. 
-//  Esegui questo programma in due versioni, con il for e con il while (facoltativo)
+// // JSnack 3
+// //  Il software deve chiedere per 5 volte all’utente di inserire un numero. 
+// //  Il programma stampa la somma di tutti i numeri inseriti. 
+// //  Esegui questo programma in due versioni, con il for e con il while (facoltativo)
 
-let dammiNumero1 = parseInt(prompt("scrivimi un numero"));
-let dammiNumero2 = parseInt(prompt("scrivimi un numero"));
-let dammiNumero3 = parseInt(prompt("scrivimi un numero"));
-let dammiNumero4 = parseInt(prompt("scrivimi un numero"));
-let dammiNumero5 = parseInt(prompt("scrivimi un numero"));
+// let dammiNumero1 = parseInt(prompt("scrivimi un numero"));
+// let dammiNumero2 = parseInt(prompt("scrivimi un numero"));
+// let dammiNumero3 = parseInt(prompt("scrivimi un numero"));
+// let dammiNumero4 = parseInt(prompt("scrivimi un numero"));
+// let dammiNumero5 = parseInt(prompt("scrivimi un numero"));
 
-console.log(dammiNumero1+dammiNumero2+dammiNumero3+dammiNumero4+dammiNumero5);
+// console.log(dammiNumero1+dammiNumero2+dammiNumero3+dammiNumero4+dammiNumero5);
 
 // fatto a mano adesso devo provare a creare un ciclo
+
+let somma = 0;
+
+for (let i = 0; i < 5; i++) {
+    const numero = parseInt(prompt("Scrivi un numero"));
+    somma += numero;
+}
+
+console.log("La somma è:", somma);
+
 
 
 
