@@ -74,16 +74,16 @@
 // L’utente inserisce due parole in successione, con due prompt. 
 // Il software stampa prima la parola più corta, poi la parola più lunga;
 
-const parolaUno = prompt("inserisci una parola");
-const parolaDue = prompt("inserisci un'altra parola");
+// const parolaUno = prompt("inserisci una parola");
+// const parolaDue = prompt("inserisci un'altra parola");
 
-if (parolaUno.length > parolaDue.length) {
-    console.log(parolaUno, parolaDue);
-} else if (parolaDue.length > parolaUno.length) {
-    console.log(parolaDue, parolaUno);
-} else {
-    console.log("le parole hanno la stessa lunghezza", parolaUno, parolaDue);
-}
+// if (parolaUno.length > parolaDue.length) {
+//     console.log(parolaUno, parolaDue);
+// } else if (parolaDue.length > parolaUno.length) {
+//     console.log(parolaDue, parolaUno);
+// } else {
+//     console.log("le parole hanno la stessa lunghezza", parolaUno, parolaDue);
+// }
 
 
 // JSnack 5
@@ -91,6 +91,34 @@ if (parolaUno.length > parolaDue.length) {
 // Chiedi per 6 volte all’utente di inserire un numero, 
 // se è dispari inseriscilo nell’array
 
+let numberDispari = [];
+
+for (let i = 0; i < 6; i++) {
+    let numero = parseInt(prompt("scrivi un numero"));
+    
+    if (numero % 2 !== 0) {
+        numberDispari.push(numero);
+    }
+    
+}
+console.log(numberDispari);
+
+// JSnack 5
+// Crea un array vuoto. 
+// Chiedi per 6 volte all’utente di inserire un numero,
+// se è dispari inseriscilo nell’array.
+
+// let numeriDispari = [];
+
+// for (let i = 0; i < 6; i++) {
+//     let numero = parseInt(prompt("Scrivi un numero"));
+
+//     if (numero % 2 !== 0) {   // controllo dispari
+//         numeriDispari.push(numero);   // inserisco nell’array
+//     }
+// }
+
+// console.log("Numeri dispari inseriti:", numeriDispari);
 
 
 
