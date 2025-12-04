@@ -61,14 +61,35 @@
 
 // fatto a mano adesso devo provare a creare un ciclo
 
-let somma = 0;
+// let somma = 0;
 
-for (let i = 0; i < 5; i++) {
-    const numero = parseInt(prompt("Scrivi un numero"));
-    somma += numero;
+// for (let i = 0; i < 5; i++) {
+//     const numero = parseInt(prompt("Scrivi un numero"));
+//     somma += numero;
+// }
+
+// console.log("La somma è:", somma);
+
+// JSnack 2
+// L’utente inserisce due parole in successione, con due prompt. 
+// Il software stampa prima la parola più corta, poi la parola più lunga;
+
+const parolaUno = prompt("inserisci una parola");
+const parolaDue = prompt("inserisci un'altra parola");
+
+if (parolaUno.length > parolaDue.length) {
+    console.log(parolaUno, parolaDue);
+} else if (parolaDue.length > parolaUno.length) {
+    console.log(parolaDue, parolaUno);
+} else {
+    console.log("le parole hanno la stessa lunghezza", parolaUno, parolaDue);
 }
 
-console.log("La somma è:", somma);
+
+// JSnack 5
+// Crea un array vuoto. 
+// Chiedi per 6 volte all’utente di inserire un numero, 
+// se è dispari inseriscilo nell’array
 
 
 
