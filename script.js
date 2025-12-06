@@ -91,35 +91,55 @@
 // Chiedi per 6 volte all’utente di inserire un numero, 
 // se è dispari inseriscilo nell’array
 
-let numberDispari = [];
-
-for (let i = 0; i < 6; i++) {
-    let numero = parseInt(prompt("scrivi un numero"));
-    
-    if (numero % 2 !== 0) {
-        numberDispari.push(numero);
-    }
-    
-}
-console.log(numberDispari);
-
-// JSnack 5
-// Crea un array vuoto. 
-// Chiedi per 6 volte all’utente di inserire un numero,
-// se è dispari inseriscilo nell’array.
-
-// let numeriDispari = [];
+// let numberDispari = [];
 
 // for (let i = 0; i < 6; i++) {
-//     let numero = parseInt(prompt("Scrivi un numero"));
+//     let numero = parseInt(prompt("scrivi un numero"));
 
-//     if (numero % 2 !== 0) {   // controllo dispari
-//         numeriDispari.push(numero);   // inserisco nell’array
+//     if (numero % 2 !== 0) {
+//         numberDispari.push(numero);
 //     }
+
 // }
-
-// console.log("Numeri dispari inseriti:", numeriDispari);
-
+// console.log(numberDispari);
 
 
+//funzioni 
+
+
+// Chiedi all’utente di inserire una parola.
+// Crea una funzione che conti quante vocali contiene.
+// Usa un array con la lista delle vocali: ["a", "e", "i", "o", "u"].
+
+// Risultato:
+// Mostra quante vocali ci sono nella parola.
+
+//chiedere all'utente di inserire una parola
+
+let parolaUtente = prompt("inserisci una parola");
+const cercaVocali = ["a", "e", "i", "o", "u"];
+const vocaliTrovate = [];
+
+function contaVocali() {
+    //creo un ciclo per analizzare tutte le singole lettere
+    for (let i = 0; i < parolaUtente.length; i++) {
+        // riduco tutte le parole in caratteri piccoli
+        let lettera = parolaUtente[i].toLowerCase();
+
+        //ciclo su vocali disponibili
+
+        for (let x = 0; x < cercaVocali.length; x++) {
+
+            //se trovo una vocale la pusho dentro a vocaliTrovate
+            if (lettera === cercaVocali[x]) {
+                vocaliTrovate.push(lettera);
+            }
+        }
+
+    }
+}
+contaVocali(); 
+
+console.log(vocaliTrovate , "queste sono le vocali all'interno dalla tua parola");
+console.log(vocaliTrovate.length , "questo è il numero di vocali presenti nella tua parola")
 
