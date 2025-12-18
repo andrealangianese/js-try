@@ -241,32 +241,39 @@ const automobili = [
   { marca: "BMW", modello: "i3", alimentazione: "elettrico" }
 ];
 
-//creo i 3 array vuoti dove pushare
+// //creo i 3 array vuoti dove pushare
 
-const autoBenzina = [];
-const autoDiesel = [];
-const altreAuto = [];
+// const autoBenzina = [];
+// const autoDiesel = [];
+// const altreAuto = [];
 
-//ciclo per verificare
+// //ciclo per verificare
 
-for (let i = 0; i < automobili.length; i++) {
+// for (let i = 0; i < automobili.length; i++) {
     
-    //creo var
-    const auto = automobili[i];
+//     //creo var
+//     const auto = automobili[i];
 
-    if(auto.alimentazione === "benzina" ) {
-        autoBenzina.push(auto);
-    } else if(auto.alimentazione === "diesel") {
-        autoDiesel.push(auto)
-    }else {
-        altreAuto.push(auto)
-    }
+//     if(auto.alimentazione === "benzina" ) {
+//         autoBenzina.push(auto);
+//     } else if(auto.alimentazione === "diesel") {
+//         autoDiesel.push(auto)
+//     }else {
+//         altreAuto.push(auto)
+//     }
     
-}
-console.log(automobili);
+// }
+// console.log(automobili);
 
-console.log("benzina =" ,autoBenzina);
-console.log("diesel =" , autoDiesel);
-console.log("queste sono le non benzina ne diesel =" ,altreAuto);
+// console.log("benzina =" ,autoBenzina);
+// console.log("diesel =" , autoDiesel);
+// console.log("queste sono le non benzina ne diesel =" ,altreAuto);
 
+//-------------------------------------------------------------
+
+//SOLUZIONE CON FILTER
+
+const autoBenzina = automobili.filter(auto => auto.alimentazione === "benzina");
+
+console.log(autoBenzina);
 
