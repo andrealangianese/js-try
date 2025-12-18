@@ -116,30 +116,157 @@
 
 //chiedere all'utente di inserire una parola
 
-let parolaUtente = prompt("inserisci una parola");
-const cercaVocali = ["a", "e", "i", "o", "u"];
-const vocaliTrovate = [];
+// let parolaUtente = prompt("inserisci una parola");
+// const cercaVocali = ["a", "e", "i", "o", "u"];
+// const vocaliTrovate = [];
 
-function contaVocali() {
-    //creo un ciclo per analizzare tutte le singole lettere
-    for (let i = 0; i < parolaUtente.length; i++) {
-        // riduco tutte le parole in caratteri piccoli
-        let lettera = parolaUtente[i].toLowerCase();
+// function contaVocali() {
+//     //creo un ciclo per analizzare tutte le singole lettere
+//     for (let i = 0; i < parolaUtente.length; i++) {
+//         // riduco tutte le parole in caratteri piccoli
+//         let lettera = parolaUtente[i].toLowerCase();
 
-        //ciclo su vocali disponibili
+//         //ciclo su vocali disponibili
 
-        for (let x = 0; x < cercaVocali.length; x++) {
+//         for (let x = 0; x < cercaVocali.length; x++) {
 
-            //se trovo una vocale la pusho dentro a vocaliTrovate
-            if (lettera === cercaVocali[x]) {
-                vocaliTrovate.push(lettera);
-            }
-        }
+//             //se trovo una vocale la pusho dentro a vocaliTrovate
+//             if (lettera === cercaVocali[x]) {
+//                 vocaliTrovate.push(lettera);
+//             }
+//         }
 
+//     }
+// }
+// contaVocali(); 
+
+// console.log(parolaUtente)
+// console.log(vocaliTrovate , "queste sono le vocali all'interno dalla tua parola");
+// console.log(vocaliTrovate.length , "questo è il numero di vocali presenti nella tua parola")
+
+/* 
+ * Crea 10 oggetti che rappresentano una zucchina, 
+ * indicandone per ognuno varietà, peso e lunghezza. 
+ * Calcola quanto pesano tutte le zucchine.
+ */
+
+
+// const zucchina = [
+
+//     {
+//         'varietà' : 'Zucchina Nera di Milano',
+//         'peso' : 34 ,
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'romanesco',
+//         'peso' : '290',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'fiorentina',
+//         'peso' : '134',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'striata di napoli',
+//         'peso' : '45',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'trombetta',
+//         'peso' : '57',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'zucchina gialla',
+//         'peso' : '69',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'bianca di sicilia',
+//         'peso' : '90',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'ortolana',
+//         'peso' : '139',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'patisson',
+//         'peso' : '98',
+//         'lunghezza' : ''
+//     },
+//      {
+//         'varietà' : 'tonda di nizza',
+//         'peso' : '75',
+//         'lunghezza' : ''
+//     }
+
+// ]
+
+// // isolo il peso in una variabile e poi lo sommo
+
+// const isolo = zucchina[0].peso;
+
+// console.log(isolo);
+
+
+// //esempio di ciclo con for of
+
+// let totalPeso = 0;
+
+// for (const item of zucchina) {
+//     totalPeso = totalPeso + Number(item.peso);
+// }
+
+// console.log(totalPeso);
+
+
+//Crea un array composto da 10 automobili. Ogni oggetto automobile avrà le seguenti proprietà: marca, modello e alimentazione (benzina, diesel, gpl, elettrico, metano). 
+// Dividi le automobili in 3 array separati: nel primo array solo le auto a benzina, nel secondo solo le auto a diesel, nel terzo il resto delle auto.
+// Infine stampa separatamente i 3 array.
+
+const automobili = [
+  { marca: "Fiat", modello: "Panda", alimentazione: "benzina" },
+  { marca: "Volkswagen", modello: "Golf", alimentazione: "diesel" },
+  { marca: "Tesla", modello: "Model 3", alimentazione: "elettrico" },
+  { marca: "Dacia", modello: "Duster", alimentazione: "gpl" },
+  { marca: "Audi", modello: "A3", alimentazione: "diesel" },
+  { marca: "Toyota", modello: "Yaris", alimentazione: "ibrido" },
+  { marca: "Opel", modello: "Corsa", alimentazione: "benzina" },
+  { marca: "Seat", modello: "Leon", alimentazione: "metano" },
+  { marca: "Renault", modello: "Clio", alimentazione: "gpl" },
+  { marca: "BMW", modello: "i3", alimentazione: "elettrico" }
+];
+
+//creo i 3 array vuoti dove pushare
+
+const autoBenzina = [];
+const autoDiesel = [];
+const altreAuto = [];
+
+//ciclo per verificare
+
+for (let i = 0; i < automobili.length; i++) {
+    
+    //creo var
+    const auto = automobili[i];
+
+    if(auto.alimentazione === "benzina" ) {
+        autoBenzina.push(auto);
+    } else if(auto.alimentazione === "diesel") {
+        autoDiesel.push(auto)
+    }else {
+        altreAuto.push(auto)
     }
+    
 }
-contaVocali(); 
+console.log(automobili);
 
-console.log(vocaliTrovate , "queste sono le vocali all'interno dalla tua parola");
-console.log(vocaliTrovate.length , "questo è il numero di vocali presenti nella tua parola")
+console.log("benzina =" ,autoBenzina);
+console.log("diesel =" , autoDiesel);
+console.log("queste sono le non benzina ne diesel =" ,altreAuto);
+
 
