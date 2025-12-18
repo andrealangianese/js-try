@@ -229,16 +229,16 @@
 // Infine stampa separatamente i 3 array.
 
 const automobili = [
-  { marca: "Fiat", modello: "Panda", alimentazione: "benzina" },
-  { marca: "Volkswagen", modello: "Golf", alimentazione: "diesel" },
-  { marca: "Tesla", modello: "Model 3", alimentazione: "elettrico" },
-  { marca: "Dacia", modello: "Duster", alimentazione: "gpl" },
-  { marca: "Audi", modello: "A3", alimentazione: "diesel" },
-  { marca: "Toyota", modello: "Yaris", alimentazione: "ibrido" },
-  { marca: "Opel", modello: "Corsa", alimentazione: "benzina" },
-  { marca: "Seat", modello: "Leon", alimentazione: "metano" },
-  { marca: "Renault", modello: "Clio", alimentazione: "gpl" },
-  { marca: "BMW", modello: "i3", alimentazione: "elettrico" }
+    { marca: "Fiat", modello: "Panda", alimentazione: "benzina" },
+    { marca: "Volkswagen", modello: "Golf", alimentazione: "diesel" },
+    { marca: "Tesla", modello: "Model 3", alimentazione: "elettrico" },
+    { marca: "Dacia", modello: "Duster", alimentazione: "gpl" },
+    { marca: "Audi", modello: "A3", alimentazione: "diesel" },
+    { marca: "Toyota", modello: "Yaris", alimentazione: "ibrido" },
+    { marca: "Opel", modello: "Corsa", alimentazione: "benzina" },
+    { marca: "Seat", modello: "Leon", alimentazione: "metano" },
+    { marca: "Renault", modello: "Clio", alimentazione: "gpl" },
+    { marca: "BMW", modello: "i3", alimentazione: "elettrico" }
 ];
 
 // //creo i 3 array vuoti dove pushare
@@ -250,7 +250,7 @@ const automobili = [
 // //ciclo per verificare
 
 // for (let i = 0; i < automobili.length; i++) {
-    
+
 //     //creo var
 //     const auto = automobili[i];
 
@@ -261,7 +261,7 @@ const automobili = [
 //     }else {
 //         altreAuto.push(auto)
 //     }
-    
+
 // }
 // console.log(automobili);
 
@@ -277,3 +277,23 @@ const autoBenzina = automobili.filter(auto => auto.alimentazione === "benzina");
 
 console.log(autoBenzina);
 
+
+//A partire da un array di stringhe, crea un secondo array formattando le stringhe del primo array in minuscolo e con l’iniziale maiuscola.
+
+
+const nomi = ["mARIO", "luCA", "aNNa", "giULia", "frANco"];
+
+//const per salvare i nuovi nomi
+const nomiFormattati = nomi.map(nome => {
+    //trasformo prima tutto in caratteri minuscoli
+    const minuscolo = nome.toLowerCase();
+    
+    //mi faccio ritornare la prima lettera ([0]) in maiuscolo più tutto il resto della parola in minuscolo
+    return minuscolo[0].toUpperCase() + minuscolo.slice(1);
+});
+
+//stampa in console
+
+console.log("array con nomi non formattati",nomi);
+
+console.log("array con nomi formattati",nomiFormattati);
